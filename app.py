@@ -13,8 +13,9 @@ while True:
     
     for (x, y, w, h) in face:                                  # Draw rectangles around detected faces
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)  # Green rectangle
+                                                     # B=0, G=255, R=0 with thickness 5
 
-    cv2.imshow("Face Detection", img)       # Display the frame with detected faces
+ cv2.imshow("Face Detection", img)       # Display the frame with detected faces
     key = cv2.waitKey(10)
     if key == 27:
         break
